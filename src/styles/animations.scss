@@ -1,0 +1,64 @@
+@keyframes animacja {
+    0%{
+        transform: scale(1);
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.025);
+        opacity: 0;
+    }
+    
+}
+@keyframes animacja-darker {
+    0%{
+        background: $gray;
+    }
+    10%{
+        background: transparent;
+    }
+    90%{
+        background: transparent;
+    }
+    100%{
+        background: $gray;
+    }
+    
+}
+@keyframes poka {
+    0%{ opacity: 0; z-index: 12;}
+    // 10%{ opacity: 0; z-index: 12;}
+    // 90%{ opacity: 1; z-index: 12;}
+    100%{ opacity: 1; }
+}
+@keyframes guziki {
+    0%{
+        opacity: 0;
+        right: 3rem;
+    }
+    100%{
+        opacity: 1;
+        right: 0rem;
+    }
+}
+@keyframes wejscie {
+   0%{
+    margin-left: 100vw;
+   }
+   100%{
+    margin-left: 0;
+   }
+}
+@keyframes wyjscie {
+   0%{
+    margin-left: 0;
+   }
+   100%{
+    margin-left: 100vw;
+   }
+}

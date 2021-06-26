@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+$blue: #2352E2;
+$gray: #161616;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    background: $gray;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    overflow-x: hidden;
+    // transition: 0.5s;
+    // transition-delay: 0.5s;
+    a, ul, li{
+        text-decoration: none;
+        list-style: none;
+        color: white;
+    }
+    h1, h2, h3, b{
+        font-weight: lighter;
+    }
+   
+    .page{
+        // width: 100vw;
+        padding-top: 5rem;
+      
+    }
+    .oferta-kat{
+        // overflow-y: hidden;
+        overflow-y: auto;
+        #img{
+            height: calc(100vh - 5rem);
+           position: fixed;
+           left: 65%;
+           transform: translateX(-35%) ;
+           z-index: -1;
+        //    display: none;
+       }
+       #sec1{
+           width: 60vw;
+           background: $gray;
+           position: absolute;
+           z-index: 3;
+           min-height: 100vh;
+           padding: 5rem;
+        //    overflow: visible;
+        //    background: pink;
+           h1{
+               font-size: 3rem;
+            //    display: none;
+           }
+           p{
+            //    display: none;
+               line-height: 2rem;
+           }
+           #products{
+            //    background: pink;
+               position: absolute;
+               margin-top: 2rem;
+               bottom: 0;
+               left: 0;
+               width: 100%;
+               height: 40%;
+               display: flex;
+               position: relative;
+               justify-content: space-around;
+               flex-wrap: wrap;
+               
+            .prod{
+                width: 100%;
+                // display: flex;
+                text-align: center;
+                // background: gray;
+                margin: 1rem;
+                img{
+                    z-index: 2;
+                    position: relative;
+                    width: 23vw;
+                    min-width: 18rem;
+                    // height: 2rem;
+                    // display: block;
+                }
+            }
+        }
+       }
+     
+       #sec2{
+           width: 10vw;
+           position: fixed;
+           right: 0;
+           top: 0;
+           z-index: 3;
+           height: 100vh ;
+           background: $gray;
+          
+       }
+      
+
+    }
+    #loading{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        font-size: 8vw;
+        white-space: nowrap;
+
+       div{
+        min-width: 40px;
+        min-height: 40px;
+        width: 10vw;
+        height: 10vw;
+        border: 8px solid rgba(255,255,255,.1);
+        border-right: 8px solid $blue;
+        border-radius: 50%;
+        animation: spinner 1s linear infinite;
+       }
+    }
+    #about{
+        flex-wrap: wrap;
+        display: flex;
+        #back-img{
+        // //    position: absolute;
+        // //    bottom: 0;
+        // //    right: 0;
+        // //   display: none;
+        // width: 40vw;
+        margin-top: -20vh;          
+            position: absolute;
+            min-height: 40vh;
+            min-width: 100vw;
+            margin-top: -20vh;
+            top: -10vh;
+            z-index: -1;
+            left: 50%;
+            transform: translateX(-50%);
+        // }
+        }
+        #smaller-about{
+            width: 30vw;
+            min-width: 15rem;
+            height: 50vh;
+            // color: $blue;
+            background: $blue;
+            overflow: hidden;
+            position: absolute;
+            padding: 1rem;
+            bottom: 0;
+            right: 0;
+            z-index: -2;
+            position: fixed;
+            display: none;
+        }
+        #napisy{
+            width: 70vw;
+            margin-left: 2rem;
+            margin-top: 2rem;
+            // display: none;
+            h1{
+                font-size: 3rem;
+            }
+            p{
+                color: rgb(160, 160, 160);
+                margin-left: 1rem;
+                margin-top: 1rem;
+                padding-bottom: 2rem;
+            }
+            min-width: 10rem;
+            // background: pink;
+        }
+        section{
+            width: 100vw;
+            margin-top: 40vh;
+            background: $gray;
+            height: 40vh;
+            padding: 2rem;
+            z-index: 2;
+            h1{
+                // margin-left: 10vw;
+                margin-top: 3rem;
+                font-size: 4rem;
+            }
+           
+            #about-mapper{
+                // background: pink;
+                display: flex;
+                margin-top: 10vh;
+                width: 60vw;
+                justify-content: space-around;
+
+                .about-card{
+                    width: 30%;
+                    
+                    h3{
+                        margin-top: 1rem;
+                        margin-bottom: 1rem;
+                    }
+                    img{
+                        width: 3rem;
+                        margin-left: 50%;
+                        transform: translateX(-50%);
+                        filter: invert(100%) sepia(6%) saturate(24%) hue-rotate(251deg) brightness(107%) contrast(105%);
+                    }
+                }
+            }
+        }
+    }
+}
+  
+@media screen  and ( max-width:  720px) {
+    .oferta-kat{
+        #sec2{
+            display: none;
+        }
+        #img{
+            display: none;
+        }
+        #sec1{
+            width: 100vw !important;
+            #products{
+                width: 75vw !important ;
+                display: block !important;
+                .prod{
+                    margin-left: 50% !important;
+                    transform: translateX(-50%) !important;
+                }
+            }
+        }
+    }
+}
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+}
+
+@import './kontakt';
+@import './menu';
+@import './main-page';
+@import './animations';
+@import './mobile';
