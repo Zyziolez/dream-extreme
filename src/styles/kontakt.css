@@ -1,64 +1,129 @@
 .kontakt {
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background: pink;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin-top: 10%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.kontakt div {
+.kontakt section {
+  width: 45vw;
+  padding: 1rem;
+}
+
+.kontakt section div {
   position: relative;
-  z-index: 0;
-  width: 60vw;
-  height: 40vw;
-  border-radius: 10px;
-  overflow: hidden;
 }
 
-.kontakt div::before {
-  content: '';
+.kontakt section input[type=text], .kontakt section textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid white;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+  margin-top: 3.5rem;
+}
+
+.kontakt section input[type=text]::-webkit-input-placeholder, .kontakt section textarea::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.kontakt section input[type=text]:-ms-input-placeholder, .kontakt section textarea:-ms-input-placeholder {
+  color: transparent;
+}
+
+.kontakt section input[type=text]::-ms-input-placeholder, .kontakt section textarea::-ms-input-placeholder {
+  color: transparent;
+}
+
+.kontakt section input[type=text]::placeholder, .kontakt section textarea::placeholder {
+  color: transparent;
+}
+
+.kontakt section label {
+  color: #afafaf;
+}
+
+.kontakt section input:focus ~ label, .kontakt section textarea:focus ~ label {
   position: absolute;
-  z-index: -2;
-  left: -50%;
-  top: -50%;
-  width: 200%;
-  height: 200%;
-  background-color: #399953;
-  background-repeat: no-repeat;
-  background-size: 50% 50%, 50% 50%;
-  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#399953), to(#399953)), -webkit-gradient(linear, left top, left bottom, from(#fbb300), to(#fbb300)), -webkit-gradient(linear, left top, left bottom, from(#d53e33), to(#d53e33)), -webkit-gradient(linear, left top, left bottom, from(#377af5), to(#377af5));
-  background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
-  -webkit-animation: rotate 4s linear infinite;
-          animation: rotate 4s linear infinite;
+  top: 2rem;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 0.5rem;
 }
 
-.kontakt div::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  left: 6px;
-  top: 6px;
-  width: calc(100% - 12px);
-  height: calc(100% - 12px);
-  background: gray;
-  border-radius: 5px;
+.kontakt .left h1 {
+  font-size: 3rem;
 }
 
-@-webkit-keyframes rotate {
-  100% {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
+.kontakt .left input[type=checkbox] {
+  margin-top: 3rem;
+}
+
+.kontakt .right {
+  border-left: 1px solid gray;
+}
+
+.kontakt .right textarea {
+  height: 15rem;
+  width: 100%;
+}
+
+.kontakt .right button {
+  width: 43vw;
+  border: 3px solid #2352E2;
+  background: transparent;
+  margin-top: 1rem;
+  height: 3rem;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.kontakt .right button:hover {
+  background: #2352E2;
+}
+
+.alert {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.664);
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 8;
+}
+
+.alert .small-alert {
+  width: 50vw;
+  height: 30vh;
+  background: #161616;
+  position: fixed;
+  top: calc(45vh - 4.8rem);
+  left: 25vw;
+  padding: 1rem;
+  z-index: 9;
+  border: 1px solid #2352E2;
+}
+
+@media screen and (max-width: 890px) {
+  .kontakt section {
+    width: 90vw !important;
   }
-}
-
-@keyframes rotate {
-  100% {
-    -webkit-transform: rotate(1turn);
-            transform: rotate(1turn);
+  .kontakt .right {
+    border-left: none;
+  }
+  .kontakt .right button {
+    width: 100% !important;
   }
 }
 /*# sourceMappingURL=kontakt.css.map */

@@ -71,19 +71,28 @@ class Produkt  {
         this.imgs = imgs;
     }
 }
+
+class Spec {
+    constructor( ico, title, value ){
+        this.ico = ico;
+        this.title = title;
+        this.value = value;
+    }
+}
+
 export const produkty = [
     new Produkt( 'rower-x', 
     'rower-x',
-    'to jest rower x joł',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     'rowery',
-    [],
-    [exports.m_rower] ),
+    [ new Spec( exports.naped_ico, 'Napęd', '300km' ), new Spec( exports.power_ico, 'Moc', '350km' ), new Spec( exports.miejsca_ico, 'Liczba miejsc', 3 ), new Spec( exports.weight_ico, 'Waga', '420kg' ) ],
+    [exports.m_rower, exports.rower] ),
     new Produkt( 'rower-y', 
     'rower-y',
-    'to jest rower y joł',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     'rowery',
-    [],
-    [exports.m_rower] ),
+    [ new Spec( exports.naped_ico, 'Napęd', '300km' ), new Spec( exports.power_ico, 'Moc', '350km' ), new Spec( exports.miejsca_ico, 'Liczba miejsc', 3 ), new Spec( exports.weight_ico, 'Waga', '420kg' ) ],
+    [exports.m_auto, exports.auto] ),
 ]
 
 export const findCategory = (link) => {

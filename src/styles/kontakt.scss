@@ -1,80 +1,115 @@
+$blue: #2352E2;
+$gray: #161616;
 .kontakt{
-    display: flex;
-    // padding-left: 5vw;
-    // padding-left: 5vw;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%) ;
-    // img{
-    //     width: 45vw;
-    //     min-width: 25rem;
-    //     min-height: 20vh;
-    //     z-index: 1;
-    // }
-    // section{
-    //     z-index: 4;
-    //     width: 45vw;
-    //     padding: 3rem;
-    //     h1{
-    //         font-size: 2rem;
-    //     }
-    //     dt{
-    //         margin-left: 1rem;
-    //         line-height: 2rem;
-    //         color: rgb(158, 158, 158);
-    //     }
-    // }
-    background: $gray;
-    div{
-        position: relative;
-        z-index: 0;
-        width: 60vw;
-        height: 30vw;
-        min-height: 70vh;
-        border-radius: 10px;
-        overflow: hidden;
-        // margin-top: 10vh;
-        &::before {
-            content: '';
-            position: absolute;
-            z-index: -2;
-            left: -50%;
-            top: -50%;
-            width: 200%;
-            height: 200%;
-            background-color: white;
-            background-repeat: no-repeat;
-            background-size: 50% 50%, 50% 50%;
-            background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-            background-image: linear-gradient(white, white), linear-gradient($gray, $gray), linear-gradient(white, white), linear-gradient($gray, $gray);
-            animation: rotate 60s linear infinite;
-        }
-        
-        &::after {
-            content: '';
-            position: absolute;
-            z-index: -1;
-            left: 6px;
-            top: 6px;
-            width: calc(100% - 12px);
-            height: calc(100% - 12px);
-            background: $gray;
-            border-radius: 5px;
-        }
+//    background: pink;
+   width: 100vw;
+   display: flex;
+   padding-left: 5vw;
+   padding-right: 5vw;
+   margin-top: 10%;
+   flex-wrap: wrap;
+//    transform: translateY(-50%);
+   section{
+       width: 45vw;
+    //    background: gray;
+       padding: 1rem;
+       div{
+           position: relative;
+       }
+       input[type=text], textarea{
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid white;
+        outline: 0;
+        font-size: 1.3rem;
+        color: white;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.2s;
+        margin-top: 3.5rem;
+        &::placeholder {
+            color: transparent;
+          }
+       }
+       label{
+           color: rgb(175, 175, 175);
+       }
+          input:focus, textarea:focus{
+            ~label{
+                position: absolute;
+                top: 2rem;
+                display: block;
+                transition: 0.2s;
+                font-size: 0.5rem;  
+            }
+          }
+    
+   }
+   .left{
+    h1{
+        font-size: 3rem;
     }
-    section{
-        position: absolute;
-        text-align: center;
-        left: 50%;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%) ;
-        line-height: 2rem;
-        font-size: 150%;
+    input[type=checkbox]{
+        margin-top: 3rem;
     }
 }
-@keyframes rotate {
-	100% {
-		transform: rotate(1turn);
-	}
+   .right{
+       border-left: 1px solid rgb(128, 128, 128);
+       textarea{
+        //    border-bottom: none;
+        //    overflow: scroll;
+        height: 15rem;
+           width: 100%;
+       }
+       button{
+        width: 43vw;
+        border: 3px solid $blue;
+        background: transparent;
+        margin-top: 1rem;
+        height: 3rem;
+        color: white;
+        transition: 0.5s;
+        &:hover{
+            background: #2352E2;
+        }
+       }
+    //    textarea:focus{
+
+    //    }
+   }
+  
+}
+.alert{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.664);
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 8;
+ .small-alert{
+     width: 50vw;
+ height: 30vh;
+ background: $gray;
+ position: fixed;
+ top:calc(45vh - 4.8rem);
+ left: 25vw;
+ padding: 1rem;
+ z-index: 9;
+ border: 1px solid $blue;
+ }
+}
+@media screen and ( max-width: 890px) {
+    .kontakt{
+        // display: block !important;
+        section{
+            width: 90vw !important;
+        }
+        .right{
+            border-left: none;
+            button{
+                width: 100% !important;
+            }
+        }
+    }
+   
 }

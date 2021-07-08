@@ -1,5 +1,5 @@
-import auto from './../images/glowna/auto.jpg'
 import quad from './../images/glowna/quad.jpg'
+import auto from './../images/glowna/auto.jpg'
 import skuter from './../images/glowna/skuter.jpg'
 import rower from './../images/glowna/rower.jpg'
 import m_auto from './../images/glowna/m-auto.jpg'
@@ -10,6 +10,10 @@ import m_trojkolowiec from './../images/glowna/m-trojkolowiec.jpg'
 import trojkolowiec from './../images/glowna/trojkolowiec.jpg'
 import m_dodatkowe from './../images/glowna/m_dodatkowe.jpg'
 import dodatkowe from './../images/glowna/dodatkowe.jpg'
+import power_ico from './../images/icons/power.svg'
+import naped_ico from './../images/icons/naped.svg'
+import weight_ico from './../images/icons/weight.svg'
+import miejsca_ico from './../images/icons/liczba-miejsc.svg'
 
 export const exports = {
     auto: auto,
@@ -23,7 +27,11 @@ export const exports = {
     trojkolowiec: trojkolowiec,
     m_trojkolowiec: m_trojkolowiec,
     dodatkowe: dodatkowe,
-    m_dodatkowe: m_dodatkowe
+    m_dodatkowe: m_dodatkowe,
+    power_ico: power_ico,
+    naped_ico: naped_ico,
+    weight_ico: weight_ico,
+    miejsca_ico: miejsca_ico
 }
 
 // const key = Radium.keyframes({

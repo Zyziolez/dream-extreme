@@ -9,6 +9,7 @@ export default function OfertaProdukt() {
 
     return (
         <div className='oferta-kat' >
+            <img src={ prod.maleZdj } className='small-prod-img' alt='produkt' />
             <section id='sec1' >
                  <h1> {prod.nazwa} </h1>
                 <p> {prod.opis} </p>
@@ -26,7 +27,8 @@ export default function OfertaProdukt() {
                     }
                 </div>
             </section>
-            <img src={ prod.duzeZdj } id='img' />
+            <img src={ prod.duzeZdj } id='img' alt='produkt' />
+           
             <section id='sec2' >
           
             </section>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 import logo from './../images/logo.svg'
 
@@ -14,9 +14,9 @@ export default function Menu() {
             setWidth(window.innerWidth)
         })
         window.addEventListener('scroll', () => {
-            if( window.scrollY > 350){
+            if( window.scrollY > 150){
                 setMeni('#161616')
-            }else if(window.scrollY < 350){
+            }else if(window.scrollY < 150){
                     setMeni('transparent')
             }
         })
@@ -28,7 +28,7 @@ export default function Menu() {
         
   <div className='menu' style={{ background:  meni, transition: '0.5s'}}   >
   <Link to='/' className='top-logo' onClick={() => {
-      if(  width <=  600 && showMenu == true ){
+      if(  width <=  600 && showMenu === true ){
         setStyl('ham-aktywny')
         setAnim('wyjscie')
         setTimeout( () =>{
@@ -36,7 +36,7 @@ export default function Menu() {
         }, 1000 )
       }
 
-  }}  > <img src={logo} /> <h2>DREAM E<span>X</span>TREME</h2> </Link>
+  }}  > <img src={logo} alt='logo' /> <h2>DREAM E<span>X</span>TREME</h2> </Link>
         { width <=  600 ? 
         <div className="center" onClick={() => {
             if( styl === 'ham-aktywny' ){
@@ -86,7 +86,7 @@ export default function Menu() {
         }} >
                         <div className='sect' >
                         <li> <Link to='/o-firmie' >O firmie </Link></li>
-                            <li><Link to='/oferta' >Oferta</Link></li>
+                            {/* <li><Link to='/oferta' >Oferta</Link></li> */}
                             <ul >
                                 <li><Link to='/oferta/samochody' > Samochody </Link></li>
                                 <li><Link to='/oferta/rowery' >Rowery  </Link></li>

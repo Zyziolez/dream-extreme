@@ -1,0 +1,1 @@
+export const mailerServer = 'http://localhost:3068'
