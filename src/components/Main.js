@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, {  useRef } from 'react'
 import { exports } from './MainToImport'
 import { Link } from 'react-router-dom'
 import SlideShow from './Inne/SlideShow';
@@ -12,9 +12,9 @@ class Autko {
     }
 }
 
-const arr = [ new Autko( 'samochody', exports.auto ), new Autko( 'quady-atv', exports.quad ), new Autko('skutery-wodne', exports.skuter), new Autko('rowery', exports.rower) ]
+const arr = [ new Autko('rowery', exports.rower), new Autko( 'samochody', exports.auto ),new Autko('skutery-wodne', exports.skuter), new Autko( 'quady-atv', exports.quad ) ]
 
-const ponizej = [ new Autko( 'samochody', exports.m_auto, 'SAMOCHODY' ), new Autko( 'quady-atv', exports.m_quad, 'QUADY-ATV' ), new Autko('skutery-wodne', exports.m_skuter, 'SKUTERY WODNE'), new Autko('rowery', exports.m_rower, 'ROWERY'), new Autko('trojkolowce', exports.m_trojkolowiec, 'TRÓJOKOŁOWCE' ), new Autko( 'dodatkowe', exports.m_dodatkowe, 'DODATKOWE ATRAKCJE' ) ]
+// const ponizej = [ new Autko( 'samochody', exports.m_auto, 'SAMOCHODY' ), new Autko( 'quady-atv', exports.m_quad, 'QUADY-ATV' ), new Autko('skutery-wodne', exports.m_skuter, 'SKUTERY WODNE'), new Autko('rowery', exports.m_rower, 'ROWERY'), new Autko('trojkolowce', exports.m_trojkolowiec, 'TRÓJOKOŁOWCE' ), new Autko( 'dodatkowe', exports.m_dodatkowe, 'DODATKOWE ATRAKCJE' ) ]
 
 export default function Main() {
     const wys = useRef(null)
@@ -33,18 +33,22 @@ export default function Main() {
                 <div className='section' >
                 { kategori.map( ( ele, i ) => 
                 <div className='border-image' key={i} >
-                    <Link to={`/oferta/${ele.nazwa.toLowerCase()}`} >
-                    <img src={ele.maleZdj} />
+                    <Link to={`/oferta/${ele.link}`} >
+                    <img src={ele.maleZdj} alt='product' />
                      <p>{ele.nazwa.toUpperCase()}</p> </Link>
                 </div>
                 ) }
                 </div>
                 <div className='o-firmie' >
-                    <img src={exports.skuter} />
+                    <div style={{width: '100vw', overflow: 'hidden', zIndex:'3'}} className='wrapp' >
+                    <img src={exports.skuter} alt='o-firmie' className='about-img' style={{ overflow: 'hidden'}} />
+                    </div>
                     <div id='textt' >
                         <h1> O firmie </h1>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Dream-extreme to firma, która powstała dla tych co lubią żyć na krawędzi i nie boja mocnych doznań.
+                            Jesteśmy dynamicznie rozwijającą się firmą oferującą między innymi sportowe samochody, rowery i skutery wodne. Posiadamy sprzęt, dzięki któremu możesz doświadczyć świetnej zabawy i mega emocji zarówno na lądzie jak i na wodzie.
+                            Ponieważ dbamy o bezpieczeństwo naszych klientów nasz sprzęt jest nowy i niezawodny.
+                            Naszą działalność prowadzimy na terenie całego województwa zatem gdziekolwiek jesteś, my jesteśmy w stanie odpowiedzieć na Twoje potrzeby.
                     </div>
                 </div>
                 <footer>

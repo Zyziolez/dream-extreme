@@ -14,6 +14,17 @@ import power_ico from './../images/icons/power.svg'
 import naped_ico from './../images/icons/naped.svg'
 import weight_ico from './../images/icons/weight.svg'
 import miejsca_ico from './../images/icons/liczba-miejsc.svg'
+import engine_ico from './../images/icons/engine.svg'
+import skuter_img from './../images/products/skuter.jpg'
+import m_skuter_img from './../images/products/m_skuter.jpg' 
+import rower_surron from './../images/products/rower_surron.jpeg' 
+import rower_mounster from './../images/products/rower_mounster.jpg' 
+import m_rower_mounster from './../images/products/m_rower_mounster.jpg' 
+import m_rower_surron from './../images/products/m_rower_surron.jpeg' 
+import samochod from './../images/products/auto.jpg' 
+import m_samochod from './../images/products/m_auto.jpg' 
+import load from './../images/icons/load.svg' 
+import speed from './../images/icons/speed.svg' 
 
 export const exports = {
     auto: auto,
@@ -31,7 +42,18 @@ export const exports = {
     power_ico: power_ico,
     naped_ico: naped_ico,
     weight_ico: weight_ico,
-    miejsca_ico: miejsca_ico
+    miejsca_ico: miejsca_ico,
+    engine_ico: engine_ico,
+    skuter_img: skuter_img,
+    m_skuter_img: m_skuter_img,
+    rower_surron: rower_surron,
+    m_rower_surron: m_rower_surron,
+    load: load,
+    speed: speed,
+    rower_mounster: rower_mounster,
+    m_rower_mounster: m_rower_mounster,
+    samochod: samochod,
+    m_samochod: m_samochod
 }
 
 // const key = Radium.keyframes({

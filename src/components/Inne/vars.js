@@ -1,1 +1,1 @@
-export const mailerServer = 'http://localhost:3068'
+export const mailerServer = 'https://88.99.68.241:3068'

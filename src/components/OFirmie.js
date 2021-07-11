@@ -1,8 +1,5 @@
 import React from 'react'
 import img from './../images/glowna/quad-wykadrowany.jpg'
-import medalIcon from './../images/icons/medal.svg'
-import ecoIcon from './../images/icons/eco.svg'
-import fastIcon from './../images/icons/fast.svg'
 
 class Card {
     constructor( icon, title, text ){
@@ -13,38 +10,32 @@ class Card {
 }
 
 export default function OFirmie() {
-    const arr = [
-        new Card( medalIcon, 'Title long boi', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' ),
-        new Card( ecoIcon, 'Title long boi ', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' ),
-        new Card( fastIcon, 'Title long boi', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' )
-    ]
     return (
         <div id='about' >
            
             <div id='smaller-about' > 
-            {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  */}
             </div>
         <section>
-            {/* <h1> Some longer presenting title </h1>
-            <div id='about-mapper' >
-                { arr.map( (ele, i ) => 
-                <div className='about-card' key={i} >
-                    <img src={ ele.icon } />
-                    <h3> {ele.title} </h3>
-                    <p> {ele.text} </p>
-                </div>
-                ) }
-            </div> */}
             <div id='napisy' >
-            <h1> Tytul </h1>
+            <h1> O nas </h1>
             <p>
-            With closeOnBeforeunload set to true, all browsers will have the same behavior (no disconnect event when reloading the page). But this might cause issues if you use the beforeunload event in your application.
-            With closeOnBeforeunload set to true, all browsers will have the same behavior (no disconnect event when reloading the page). But this might cause issues if you use the beforeunload event in your application.
-            With closeOnBeforeunload set to true, all browsers will have the same behavior (no disconnect event when reloading the page). But this might cause issues if you use the beforeunload event in your application.
+            Dream-extreme to firma, która powstała dla tych co lubią żyć na krawędzi i nie boja mocnych doznań.
+
+            Jesteśmy dynamicznie rozwijającą się firmą oferującą między innymi sportowe samochody, rowery … i skutery wodne. Posiadamy sprzęt, dzięki któremu możesz doświadczyć świetnej zabawy i mega emocji zarówno na lądzie jak i na wodzie.
+            Ponieważ dbamy o bezpieczeństwo naszych klientów nasz sprzęt jest nowy i niezawodny.
+            Naszą działalność prowadzimy na terenie całego województwa zatem gdziekolwiek jesteś, my jesteśmy w stanie odpowiedzieć na Twoje potrzeby.
+            Żeby odpowiedzieć na Wasze oczekiwania, wychodzimy  na przeciw i spełniamy również indywidualne potrzeby.
+            Oferujemy krótko i długo terminowy najem sprzętu znajdującego się w naszej ofercie. W związku z coraz większym zainteresowaniem, wsłuchując się w Wasze potrzeby i oczekiwania, cały czas powiększamy naszą ofertę.
+            Już niebawem będziesz mógł również kupić u Nas sprzęt, z którego korzystałeś.
+            Dla naszych stałych klientów oferujemy specjalne rabaty.
+            <br/>
+            Team Dream-Extreme
             </p>
             </div>
             </section>
-            <img src={ img } id='back-img' />
+            <div className='back-wrapper' >
+            <img src={ img } id='back-img' alt='background' />
+            </div>
         
         </div>
     )

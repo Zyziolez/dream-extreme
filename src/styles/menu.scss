@@ -8,6 +8,7 @@ $gray: #161616;
     position: fixed;
     z-index: 20;
     top: 0;
+    user-select: none;
    .top-logo{
        display: flex;
     img{
@@ -36,6 +37,7 @@ $gray: #161616;
         display: block;
         top: 50%;
         left: 50%;
+        width: 60vw;
         transform: translateY(-50%) translateX(-50%);
         font-size: 1.5rem;
         line-height: 2.5rem;
@@ -103,7 +105,7 @@ $gray: #161616;
             opacity: 0;
             min-width: 13rem;
             position: absolute;
-            background: rgba(0, 0, 0, 0.623);
+            background: rgba(0, 0, 0, 0.781);
              left: -3rem;
             display: none;
             padding: 1rem;

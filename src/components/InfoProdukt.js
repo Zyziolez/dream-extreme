@@ -24,11 +24,12 @@ export default function InfoProdukt() {
                 <div className='shadow-menu' style={{ background: background }} ></div>
                 <section className='product-spec' >
                     <h1> {info.nazwa} </h1>
-                    <p> {info.opis} </p>
+                    <img src={ info.imgs[0] } alt={info.nazwa} className='small-pic' />
+                    <p className='prod-desc' > {info.opis} </p>
                     <div className='product-map' >
                         { info.specyfikacja.map( ( prod, i ) => 
                             <section key={i} >
-                                <img src={ prod.ico } alt='product icon'/>
+                                <img src={ prod.ico } alt='product icon' className='prod-icons' />
                                 <h3> { prod.title }: {prod.value} </h3>
                             </section>
                         ) }
@@ -36,7 +37,7 @@ export default function InfoProdukt() {
                 </section>
             </div>
             :
-            <h2> Przepraszamy wystąpił błąd! </h2>
+            <h2 style={{textAlign: 'center', marginTop: 'calc(50vh - 6.8rem)'}} > Nie odnaleziono produktu </h2>
         }
         </div>
     )

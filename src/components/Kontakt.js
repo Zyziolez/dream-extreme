@@ -43,6 +43,7 @@ export default function Kontakt() {
             <div className='kontakt' >
              <section className='left' >
                  <h1> Skontaktuj się z nami! </h1>
+                 <p> Nr. tel: 509 856 336 </p>
                  <div>
                     <input type='text' id='name' value={ name } onChange={e => setName(e.target.value) } />
                     <label for='name' > Imię i nazwisko </label>
@@ -52,7 +53,7 @@ export default function Kontakt() {
                   <label for='mail' > Mail kontaktowy </label>
                 </div>
                  <input type='checkbox' id='check' checked={accept} onChange={e =>setAccept(!accept) } />
-                 <lablel for='check' > Zapoznałem się z regulaminem </lablel><br/>
+                 <lablel for='check' style={{fontSize: '0.9rem'}} > Wyrażam zgodę na przetwarzanie moich danych osobowych . Zapoznałem się z informacją o przetwarzaniu danych osobowych.<a href='./../info/polityka.pdf' target='_blank' style={{textDecoration: 'underline'}} > Zobacz politykę prywatności. </a> </lablel><br/>
              </section>
              <section className='right' >
                     <div>

@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import { Fade, Zoom } from 'react-slideshow-image';
+import { Fade} from 'react-slideshow-image';
 
 export default function SlideShow({zdjecia}) {
-    const [kolej, setKolej] = useState( 0 )
-    const [styl, setStyl] = useState('none')
+    // const [kolej, setKolej] = useState( 0 )
+    // const [styl, setStyl] = useState('none')
 
     // useEffect(() => {
     //     setTimeout(() => {
@@ -32,10 +32,13 @@ export default function SlideShow({zdjecia}) {
                 <Fade arrows={false} duration={5000} pauseOnHover={false} scale={1.025} >
                     { zdjecia.map( (zdj, i) => 
                         <div className='ua' key={i} >
-                            <img src={zdj.zdjecie} key={i} style={{zIndex: '-10'}}  />
+                          <div className='img-wrapper' >
+                          <img src={zdj.zdjecie} key={i} style={{zIndex: '-10'}} alt=''  />
+                          </div>
                             <div className='text-rog' >
                                 <h1>DREAM E<span>X</span>TREME</h1>
-                                <p> lorem ipsum text na dole </p>
+                                <p> Kochasz adrenalinę? Pragniesz emocji? <br/>
+                                     Dream-extreme spełni Twoje pragnienia… </p>
                                 <Link to={`/oferta/${zdj.link}`} ><button> Zobacz Ofertę</button></Link>
                             </div>
                         </div>

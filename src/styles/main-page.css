@@ -1,0 +1,228 @@
+.main .aaa {
+  width: 100vw;
+  height: 100vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow-x: hidden;
+}
+
+.main .aaa .img-wrapper {
+  width: 100px;
+  overflow-x: hidden;
+}
+
+.main .aaa .img-wrapper img {
+  z-index: -10;
+  min-width: 1400px;
+  max-width: 110vw;
+  position: fixed;
+  left: 50%;
+  min-height: 110vh;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -10vh;
+  -webkit-filter: grayscale(20%);
+          filter: grayscale(20%);
+}
+
+.main .aaa h1, .main .aaa p, .main .aaa button {
+  -webkit-animation: guziki 1s forwards;
+          animation: guziki 1s forwards;
+  opacity: 0;
+}
+
+.main .aaa p {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.main .aaa button {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.main .aaa .text-rog {
+  text-align: right;
+  position: absolute;
+  top: 65vh;
+  right: 4rem;
+  z-index: 2;
+}
+
+.main .aaa .text-rog h1 {
+  font-size: 4rem;
+}
+
+.main .aaa .text-rog h1 span {
+  color: #2352E2;
+}
+
+.main .aaa .text-rog button {
+  background: transparent;
+  border: 3px solid #2352E2;
+  color: white;
+  font-family: 'Anton', sans-serif;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 12rem;
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+.main .aaa .text-rog button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  background: #2352E2;
+  z-index: -2;
+}
+
+.main .aaa .text-rog button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  background: transparent;
+}
+
+.main .aaa .text-rog button:hover::before {
+  width: 100%;
+}
+
+.main .reszta {
+  width: 100vw;
+  min-height: 100vh;
+  background: #161616;
+  overflow-x: hidden;
+  z-index: 2;
+  position: absolute;
+}
+
+.main .reszta .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  z-index: 100;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.main .reszta .section .border-image {
+  padding: 1rem;
+  position: relative;
+}
+
+.main .reszta .section .border-image img {
+  width: 30vw;
+  min-width: 32rem;
+  max-width: 40rem;
+  z-index: -2;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.main .reszta .section .border-image p {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 2.5rem;
+}
+
+.main .reszta .section .border-image:hover img {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+.main .reszta .o-firmie {
+  border-top: 3px solid #2352E2;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  height: 50vh;
+}
+
+.main .reszta .o-firmie img {
+  max-height: 60vh;
+  min-width: 45vw;
+  z-index: -2;
+}
+
+.main .reszta .o-firmie #textt {
+  position: absolute;
+  top: 0;
+  left: 45vw;
+  width: 55vw;
+  min-width: 25rem;
+  background: white;
+  height: 55vh;
+  padding: 3rem;
+  color: #161616;
+}
+
+.main .reszta footer {
+  position: relative;
+  padding: 2rem;
+  background: #161616;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.main .reszta footer p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100vw;
+  background: #161616;
+  text-align: center;
+}
+
+.main .reszta footer ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100vw - 8rem);
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .reszta footer ul, .main .reszta footer li {
+  color: #8a8a8a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .aaa img {
+    max-width: 120vw !important;
+  }
+}
+/*# sourceMappingURL=main-page.css.map */

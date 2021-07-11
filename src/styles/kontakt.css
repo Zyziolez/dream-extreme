@@ -5,7 +5,7 @@
   display: flex;
   padding-left: 5vw;
   padding-right: 5vw;
-  margin-top: 10%;
+  margin-top: 5%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -64,6 +64,10 @@
 
 .kontakt .left h1 {
   font-size: 3rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .kontakt .left input[type=checkbox] {

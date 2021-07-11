@@ -6,7 +6,7 @@ $gray: #161616;
    display: flex;
    padding-left: 5vw;
    padding-right: 5vw;
-   margin-top: 10%;
+   margin-top: 5%;
    flex-wrap: wrap;
 //    transform: translateY(-50%);
    section{
@@ -46,8 +46,10 @@ $gray: #161616;
     
    }
    .left{
+       
     h1{
         font-size: 3rem;
+        user-select: none;   
     }
     input[type=checkbox]{
         margin-top: 3rem;

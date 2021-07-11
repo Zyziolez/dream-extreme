@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import {findCategory, findProd} from './../info/produkty'
 import {Link} from 'react-router-dom'
 
@@ -18,7 +18,7 @@ export default function OfertaProdukt() {
                         products.map((pro, i) => 
                         <Link key={i} to={`/produkt/${pro.link}`} >
                             <div className='prod'  >
-                                <img src={pro.imgs[0]} />
+                                <img src={pro.imgs[0]} alt={pro.nazwa} />
                                 <h2> {pro.nazwa} </h2>
                             </div>  
                         </Link>

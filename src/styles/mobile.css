@@ -1,0 +1,81 @@
+@media screen and (max-width: 700px) {
+  body {
+    overflow-x: hidden !important;
+  }
+  body .menu {
+    background: transparent;
+  }
+  body .menu .top-logo h2 {
+    font-size: 1.5rem;
+  }
+  body .menu .top-logo img {
+    width: 4rem;
+  }
+  body .page .main .aaa {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  body .page .main .aaa .img-wrapper {
+    width: 100px;
+    overflow-x: hidden;
+  }
+  body .page .main .aaa .img-wrapper img {
+    min-width: 1000px !important;
+    min-height: calc(100vh + 5rem);
+    opacity: 0.5;
+    top: 0;
+  }
+  body .page .main .aaa .text-rog {
+    text-align: center;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    line-height: 100vh;
+    right: 0;
+  }
+  body .page .main .aaa .text-rog h1 {
+    font-size: 2.2rem;
+  }
+  body .page .main .aaa .text-rog button {
+    position: absolute;
+    height: 4rem;
+    bottom: 4rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.363);
+  }
+  body .page .main .reszta .section .border-image img {
+    width: 90vw;
+    min-width: 90vw;
+  }
+  body .page .main .reszta .o-firmie {
+    width: 100vw;
+    height: 100vh;
+  }
+  body .page .main .reszta .o-firmie .wrapp {
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  body .page .main .reszta .o-firmie .wrapp img {
+    position: absolute;
+    width: 100vh;
+    top: 50vh;
+    display: block;
+  }
+  body .page .main .reszta .o-firmie #textt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: white;
+    height: 55vh;
+    padding: 3rem;
+    color: #161616;
+  }
+  .kontakt {
+    font-size: 100%;
+  }
+}
+/*# sourceMappingURL=mobile.css.map */
